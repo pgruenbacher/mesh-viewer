@@ -13,6 +13,8 @@ find_package(GLEW REQUIRED)
 file (GLOB source_files "${source_dir}/*.cpp" "${source_dir}/deps/*.cpp" "${source_dir}/deps/*/*.cpp")
 
 add_executable (viewer ${source_files})
+target_include_directories(viewer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
+target_include_directories(viewer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/deps/imgui)
 target_link_libraries(viewer glfw)
 target_link_libraries(viewer OpenGL::GL)
 target_link_libraries(viewer GLEW)

@@ -15,8 +15,8 @@
 #include "mesh.h"
 
 #include "deps/imgui/imgui.h"
-#include "deps/imgui/imgui_impl_glfw.h"
-#include "deps/imgui/imgui_impl_opengl3.h"
+#include "deps/imgui/backends/imgui_impl_glfw.h"
+#include "deps/imgui/backends/imgui_impl_opengl3.h"
         
 #define MAINPROGRAM 
 #include "globals.h" 
