@@ -10,7 +10,11 @@ find_package(glfw3 3.3 REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
 
-file (GLOB source_files "${source_dir}/*.cpp" "${source_dir}/deps/*.cpp" "${source_dir}/deps/*/*.cpp")
+file (GLOB source_files "${source_dir}/*.cpp" 
+	"${source_dir}/deps/*.cpp" 
+	"${source_dir}/deps/*/*.cpp"
+	"${source_dir}/deps/imgui/backends/imgui_impl_opengl3.cpp"
+	"${source_dir}/deps/imgui/backends/imgui_impl_glfw.cpp")
 
 add_executable (viewer ${source_files})
 target_include_directories(viewer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
